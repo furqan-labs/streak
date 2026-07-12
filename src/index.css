@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #fff8ed;
+  --color-cream-deep: #fcefd9;
+  --color-ink: #2b2118;
+  --color-ink-muted: #8a7c6a;
+  --color-line: #ecdfc9;
+
+  --color-flame: #ff5a36;
+  --color-flame-tint: #ffe4d9;
+  --color-sky: #2f8fff;
+  --color-sky-tint: #dceeff;
+  --color-grape: #9c4dff;
+  --color-grape-tint: #ede0ff;
+  --color-mint: #14b87f;
+  --color-mint-tint: #d8f5e9;
+  --color-sun: #ffb800;
+  --color-sun-tint: #fff3d1;
+
+  --font-display: "Fredoka", ui-rounded, "Inter", sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-ink);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+.bg-warm-gradient {
+  background: radial-gradient(circle at 15% 0%, var(--color-cream-deep) 0%, var(--color-cream) 55%);
+}
+
+@keyframes flame-flicker {
+  0%, 100% { transform: scale(1) rotate(-2deg); }
+  50% { transform: scale(1.06) rotate(2deg); }
+}
+.animate-flicker {
+  animation: flame-flicker 1.6s ease-in-out infinite;
+}
+
+@keyframes pop-in {
+  0% { transform: scale(0.6); opacity: 0; }
+  60% { transform: scale(1.12); opacity: 1; }
+  100% { transform: scale(1); }
+}
+.animate-pop {
+  animation: pop-in 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes confetti-fall {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(120px) rotate(540deg); opacity: 0; }
+}
+.animate-confetti {
+  animation: confetti-fall 0.9s ease-out forwards;
+}
