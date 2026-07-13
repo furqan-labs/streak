@@ -15,4 +15,4 @@ export const COLOR_CLASSES: Record<HabitColor, ColorClasses> = {
   sun: { tint: 'bg-sun-tint', bold: 'bg-sun', boldText: 'text-sun', ring: 'ring-sun' },
 };
 
-export const EMOJI_OPTIONS = ['🔥', '💧', '🏃', '📚', '🧘', '🎨', '🥗', '💤', '✍️', '🎸', '🧹', '☀️'];
+export const EMOJI_OPTIONS = ['🔥', '🙏', '🏃', '📚', '🧘', '🎨', '🥗', '💤', '✍️', '🎸', '🧹', '☀️'];
