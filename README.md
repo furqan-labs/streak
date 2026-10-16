@@ -2,7 +2,7 @@
 
 A playful, animated habit tracker: tap a circle once a day, watch a flame grow with your streak, and see your history as a GitHub-style heatmap. Built to show a different design register than the rest of this portfolio — bold color, motion, and celebration instead of muted/corporate UI.
 
-**Live demo:** https://Firqan.github.io/streak/
+**Live demo:** https://furqan-labs.github.io/streak/
 
 ## Features
 
